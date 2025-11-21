@@ -1,0 +1,2315 @@
+{
+  "metadata": {
+    "generation_time": "2025-11-21T12:17:55.027180",
+    "version": "1.0.0",
+    "scenarios_tested": [
+      "LAN_Environment",
+      "WAN_Environment",
+      "Satellite_Environment",
+      "Mobile_Environment",
+      "Constrained_Environment"
+    ],
+    "crypto_types": [
+      "classical",
+      "hybrid",
+      "post_quantum"
+    ]
+  },
+  "executive_summary": {
+    "key_findings": [
+      "Hybrid algorithms show 1.4% time overhead vs classical",
+      "Post-quantum algorithms show 0.4% time overhead vs classical",
+      "Hybrid algorithms increase message size by 320.1%",
+      "Network latency has greater impact on post-quantum algorithms",
+      "Classical algorithms maintain best reliability across all network conditions",
+      "Fastest algorithm: ECDH-P256 + RSA-2048 (2.6ms)",
+      "Most reliable: ECDH-P256 + RSA-2048 (100.0% success)"
+    ],
+    "performance_impact": {
+      "classical": {
+        "time_overhead": "0.0%",
+        "size_overhead": "0.0%"
+      },
+      "hybrid": {
+        "time_overhead": "1.4%",
+        "size_overhead": "320.1%"
+      },
+      "post_quantum": {
+        "time_overhead": "0.4%",
+        "size_overhead": "446.1%"
+      }
+    },
+    "security_trade_offs": {},
+    "deployment_readiness": {}
+  },
+  "performance_overview": {
+    "crypto_type_performance": {
+      "classical": {
+        "avg_handshake_time_ms": 416.8541862603689,
+        "avg_message_size_bytes": 788.0
+      },
+      "hybrid": {
+        "avg_handshake_time_ms": 422.84736137606416,
+        "avg_message_size_bytes": 3310.0
+      },
+      "post_quantum": {
+        "avg_handshake_time_ms": 418.716437911056,
+        "avg_message_size_bytes": 4303.0
+      }
+    },
+    "speed_rankings": [
+      {
+        "algorithm": "ECDH-P256 + RSA-2048",
+        "crypto_type": "classical",
+        "time_ms": 2.5716691323261376
+      },
+      {
+        "algorithm": "Kyber768 + Dilithium2",
+        "crypto_type": "post_quantum",
+        "time_ms": 3.2651484814406437
+      },
+      {
+        "algorithm": "ECDH-P384 + ECDSA-P384",
+        "crypto_type": "classical",
+        "time_ms": 3.353350984512364
+      },
+      {
+        "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+        "crypto_type": "hybrid",
+        "time_ms": 4.2320532720579545
+      },
+      {
+        "algorithm": "Kyber1024 + Dilithium3",
+        "crypto_type": "post_quantum",
+        "time_ms": 4.251990821742067
+      }
+    ],
+    "size_rankings": [
+      {
+        "algorithm": "ECDH-P384 + ECDSA-P384",
+        "crypto_type": "classical",
+        "size_bytes": 724.0
+      },
+      {
+        "algorithm": "ECDH-P384 + ECDSA-P384",
+        "crypto_type": "classical",
+        "size_bytes": 724.0
+      },
+      {
+        "algorithm": "ECDH-P384 + ECDSA-P384",
+        "crypto_type": "classical",
+        "size_bytes": 724.0
+      },
+      {
+        "algorithm": "ECDH-P384 + ECDSA-P384",
+        "crypto_type": "classical",
+        "size_bytes": 724.0
+      },
+      {
+        "algorithm": "ECDH-P384 + ECDSA-P384",
+        "crypto_type": "classical",
+        "size_bytes": 724.0
+      }
+    ],
+    "reliability_rankings": []
+  },
+  "algorithm_comparison": {
+    "top_performers": {
+      "fastest": {
+        "scenario": "LAN_Environment",
+        "crypto_type": "classical",
+        "algorithm": "ECDH-P256 + RSA-2048",
+        "time_ms": 2.5716691323261376,
+        "size_bytes": 852.0,
+        "success_rate": 100.0,
+        "balanced_score": 0.9517896396243537
+      },
+      "smallest": {
+        "scenario": "LAN_Environment",
+        "crypto_type": "classical",
+        "algorithm": "ECDH-P384 + ECDSA-P384",
+        "time_ms": 3.353350984512364,
+        "size_bytes": 724.0,
+        "success_rate": 100.0,
+        "balanced_score": 0.9586620751160029
+      },
+      "most_reliable": {
+        "scenario": "LAN_Environment",
+        "crypto_type": "classical",
+        "algorithm": "ECDH-P256 + RSA-2048",
+        "time_ms": 2.5716691323261376,
+        "size_bytes": 852.0,
+        "success_rate": 100.0,
+        "balanced_score": 0.9517896396243537
+      }
+    },
+    "balanced_rankings": [
+      {
+        "scenario": "LAN_Environment",
+        "crypto_type": "classical",
+        "algorithm": "ECDH-P384 + ECDSA-P384",
+        "time_ms": 3.353350984512364,
+        "size_bytes": 724.0,
+        "success_rate": 100.0,
+        "balanced_score": 0.9586620751160029
+      },
+      {
+        "scenario": "LAN_Environment",
+        "crypto_type": "classical",
+        "algorithm": "ECDH-P256 + RSA-2048",
+        "time_ms": 2.5716691323261376,
+        "size_bytes": 852.0,
+        "success_rate": 100.0,
+        "balanced_score": 0.9517896396243537
+      },
+      {
+        "scenario": "WAN_Environment",
+        "crypto_type": "classical",
+        "algorithm": "ECDH-P384 + ECDSA-P384",
+        "time_ms": 105.90245052638095,
+        "size_bytes": 724.0,
+        "success_rate": 100.0,
+        "balanced_score": 0.9261392458475879
+      },
+      {
+        "scenario": "WAN_Environment",
+        "crypto_type": "classical",
+        "algorithm": "ECDH-P256 + RSA-2048",
+        "time_ms": 105.43501959290374,
+        "size_bytes": 852.0,
+        "success_rate": 100.0,
+        "balanced_score": 0.9191671475697973
+      },
+      {
+        "scenario": "LAN_Environment",
+        "crypto_type": "hybrid",
+        "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+        "time_ms": 4.2320532720579545,
+        "size_bytes": 1940.0,
+        "success_rate": 100.0,
+        "balanced_score": 0.8907401587392723
+      }
+    ],
+    "trade_off_analysis": {}
+  },
+  "network_impact": {
+    "latency_sensitivity": {
+      "classical": {
+        "variance": 202452.26996838654,
+        "stability_score": 0.4809109752250124
+      },
+      "hybrid": {
+        "variance": 202536.6186753977,
+        "stability_score": 0.484423360878466
+      },
+      "post_quantum": {
+        "variance": 201536.18513244943,
+        "stability_score": 0.4825899963071239
+      }
+    },
+    "recommendations_by_network": {
+      "high_latency_networks": [
+        "Use hybrid algorithms for high-latency networks"
+      ],
+      "low_bandwidth_networks": [],
+      "unreliable_networks": [],
+      "general_guidelines": [
+        "Classical algorithms perform best in constrained networks",
+        "Hybrid algorithms provide good balance of security and performance",
+        "Post-quantum algorithms require careful network condition assessment",
+        "Consider timeout adjustments for post-quantum in high-latency scenarios"
+      ]
+    }
+  },
+  "recommendations": {
+    "by_use_case": {
+      "high_security_requirements": "Consider hybrid or post-quantum algorithms",
+      "performance_critical": "Use classical algorithms for now, monitor PQ development",
+      "balanced_approach": "Deploy hybrid algorithms for future-proofing",
+      "constrained_networks": "Stick with classical, evaluate hybrid carefully"
+    },
+    "migration_strategy": [
+      "Phase 1: Deploy hybrid algorithms in controlled environments",
+      "Phase 2: Gradually expand to production systems",
+      "Phase 3: Monitor performance and adjust configurations",
+      "Phase 4: Evaluate pure post-quantum for high-security applications"
+    ],
+    "implementation_priorities": [
+      "Implement timeout adjustments for post-quantum algorithms",
+      "Deploy network monitoring for message size tracking",
+      "Establish fallback mechanisms to classical algorithms",
+      "Create performance baseline measurements"
+    ]
+  },
+  "detailed_results": {
+    "LAN_Environment": {
+      "classical": {
+        "crypto_type": "classical",
+        "scenario": "LAN_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 2.5716691323261376,
+            "median_handshake_time_ms": 2.563866429802023,
+            "std_handshake_time_ms": 0.17528092455372657,
+            "min_handshake_time_ms": 2.1203369071860765,
+            "max_handshake_time_ms": 3.0450870580830016,
+            "p95_handshake_time_ms": 2.844264449481936,
+            "p99_handshake_time_ms": 3.0023762831436844,
+            "mean_message_size": 852.0,
+            "median_message_size": 852.0,
+            "iterations": 100,
+            "successful_iterations": 100,
+            "algorithm": "ECDH-P256 + RSA-2048",
+            "algorithm_details": {
+              "name": "ECDH-P256 + RSA-2048",
+              "key_exchange": "ECDH-P256",
+              "authentication": "RSA-2048",
+              "key_size": 256,
+              "security_level": 128,
+              "key_gen_time_ms": 0.5,
+              "verify_time_ms": 1.0,
+              "public_key_size": 64,
+              "signature_size": 256
+            },
+            "crypto_type": "classical"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 3.353350984512364,
+            "median_handshake_time_ms": 3.3247793071168608,
+            "std_handshake_time_ms": 0.2527606536517513,
+            "min_handshake_time_ms": 2.8003406828052384,
+            "max_handshake_time_ms": 4.135810135415551,
+            "p95_handshake_time_ms": 3.767648433882147,
+            "p99_handshake_time_ms": 3.893430645976288,
+            "mean_message_size": 724.0,
+            "median_message_size": 724.0,
+            "iterations": 100,
+            "successful_iterations": 100,
+            "algorithm": "ECDH-P384 + ECDSA-P384",
+            "algorithm_details": {
+              "name": "ECDH-P384 + ECDSA-P384",
+              "key_exchange": "ECDH-P384",
+              "authentication": "ECDSA-P384",
+              "key_size": 384,
+              "security_level": 192,
+              "key_gen_time_ms": 0.8,
+              "verify_time_ms": 1.5,
+              "public_key_size": 96,
+              "signature_size": 96
+            },
+            "crypto_type": "classical"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 1000,
+          "latency_ms": 0.5,
+          "packet_loss_percent": 0.0,
+          "jitter_ms": 0.1
+        }
+      },
+      "hybrid": {
+        "crypto_type": "hybrid",
+        "scenario": "LAN_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 4.2320532720579545,
+            "median_handshake_time_ms": 4.215314882083209,
+            "std_handshake_time_ms": 0.2519733500547399,
+            "min_handshake_time_ms": 3.6601659045887107,
+            "max_handshake_time_ms": 4.802737441039694,
+            "p95_handshake_time_ms": 4.6697031414745025,
+            "p99_handshake_time_ms": 4.798427643202373,
+            "mean_message_size": 1940.0,
+            "median_message_size": 1940.0,
+            "iterations": 100,
+            "successful_iterations": 100,
+            "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+            "algorithm_details": {
+              "name": "ECDH-P256 + Kyber768 + RSA-2048",
+              "classical_ke": "ECDH-P256",
+              "pq_ke": "Kyber768",
+              "authentication": "RSA-2048",
+              "key_size": 256,
+              "pq_security_level": 192,
+              "key_gen_time_ms": 2.1,
+              "verify_time_ms": 1.0,
+              "public_key_size": 1088,
+              "signature_size": 256
+            },
+            "crypto_type": "hybrid"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 6.674866786885381,
+            "median_handshake_time_ms": 6.659017009307844,
+            "std_handshake_time_ms": 0.43322040907479403,
+            "min_handshake_time_ms": 5.739326284232108,
+            "max_handshake_time_ms": 7.864544038665322,
+            "p95_handshake_time_ms": 7.375685815917514,
+            "p99_handshake_time_ms": 7.846747771821458,
+            "mean_message_size": 4680.0,
+            "median_message_size": 4680.0,
+            "iterations": 100,
+            "successful_iterations": 100,
+            "algorithm": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+            "algorithm_details": {
+              "name": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+              "classical_ke": "ECDH-P256",
+              "pq_ke": "Kyber1024",
+              "classical_auth": "ECDSA-P256",
+              "pq_auth": "Dilithium2",
+              "key_size": 256,
+              "pq_security_level": 256,
+              "key_gen_time_ms": 3.2,
+              "verify_time_ms": 2.3,
+              "public_key_size": 1568,
+              "signature_size": 2420
+            },
+            "crypto_type": "hybrid"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 1000,
+          "latency_ms": 0.5,
+          "packet_loss_percent": 0.0,
+          "jitter_ms": 0.1
+        }
+      },
+      "post_quantum": {
+        "crypto_type": "post_quantum",
+        "scenario": "LAN_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 3.2651484814406437,
+            "median_handshake_time_ms": 3.2488859477130436,
+            "std_handshake_time_ms": 0.1793262393781701,
+            "min_handshake_time_ms": 2.8889084461416106,
+            "max_handshake_time_ms": 3.7263141796039356,
+            "p95_handshake_time_ms": 3.539385905142383,
+            "p99_handshake_time_ms": 3.7083129495949008,
+            "mean_message_size": 4136.0,
+            "median_message_size": 4136.0,
+            "iterations": 100,
+            "successful_iterations": 100,
+            "algorithm": "Kyber768 + Dilithium2",
+            "algorithm_details": {
+              "name": "Kyber768 + Dilithium2",
+              "key_exchange": "Kyber768",
+              "authentication": "Dilithium2",
+              "key_size": 768,
+              "security_level": 192,
+              "key_gen_time_ms": 1.8,
+              "verify_time_ms": 0.3,
+              "public_key_size": 1184,
+              "signature_size": 2420
+            },
+            "crypto_type": "post_quantum"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 4.251990821742067,
+            "median_handshake_time_ms": 4.253851545147265,
+            "std_handshake_time_ms": 0.24331376581748587,
+            "min_handshake_time_ms": 3.600718232115345,
+            "max_handshake_time_ms": 4.830003853039114,
+            "p95_handshake_time_ms": 4.628405784847538,
+            "p99_handshake_time_ms": 4.757503154302385,
+            "mean_message_size": 5393.0,
+            "median_message_size": 5393.0,
+            "iterations": 100,
+            "successful_iterations": 100,
+            "algorithm": "Kyber1024 + Dilithium3",
+            "algorithm_details": {
+              "name": "Kyber1024 + Dilithium3",
+              "key_exchange": "Kyber1024",
+              "authentication": "Dilithium3",
+              "key_size": 1024,
+              "security_level": 256,
+              "key_gen_time_ms": 2.5,
+              "verify_time_ms": 0.6,
+              "public_key_size": 1568,
+              "signature_size": 3293
+            },
+            "crypto_type": "post_quantum"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 5.384740522883333,
+            "median_handshake_time_ms": 5.3813934196552164,
+            "std_handshake_time_ms": 0.3634732085552801,
+            "min_handshake_time_ms": 4.5225123228865565,
+            "max_handshake_time_ms": 6.1933998075821854,
+            "p95_handshake_time_ms": 5.872700750092332,
+            "p99_handshake_time_ms": 6.185650815246018,
+            "mean_message_size": 3380.0,
+            "median_message_size": 3380.0,
+            "iterations": 100,
+            "successful_iterations": 100,
+            "algorithm": "Kyber1024 + Falcon-1024",
+            "algorithm_details": {
+              "name": "Kyber1024 + Falcon-1024",
+              "key_exchange": "Kyber1024",
+              "authentication": "Falcon-1024",
+              "key_size": 1024,
+              "security_level": 256,
+              "key_gen_time_ms": 3.1,
+              "verify_time_ms": 1.2,
+              "public_key_size": 1568,
+              "signature_size": 1280
+            },
+            "crypto_type": "post_quantum"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 1000,
+          "latency_ms": 0.5,
+          "packet_loss_percent": 0.0,
+          "jitter_ms": 0.1
+        }
+      }
+    },
+    "WAN_Environment": {
+      "classical": {
+        "crypto_type": "classical",
+        "scenario": "WAN_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 105.43501959290374,
+            "median_handshake_time_ms": 105.06626526010871,
+            "std_handshake_time_ms": 2.688284958777528,
+            "min_handshake_time_ms": 101.79526755901357,
+            "max_handshake_time_ms": 113.4930604265878,
+            "p95_handshake_time_ms": 110.38436108129191,
+            "p99_handshake_time_ms": 112.61452573661738,
+            "mean_message_size": 852.0,
+            "median_message_size": 852.0,
+            "iterations": 50,
+            "successful_iterations": 50,
+            "algorithm": "ECDH-P256 + RSA-2048",
+            "algorithm_details": {
+              "name": "ECDH-P256 + RSA-2048",
+              "key_exchange": "ECDH-P256",
+              "authentication": "RSA-2048",
+              "key_size": 256,
+              "security_level": 128,
+              "key_gen_time_ms": 0.5,
+              "verify_time_ms": 1.0,
+              "public_key_size": 64,
+              "signature_size": 256
+            },
+            "crypto_type": "classical"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 105.90245052638095,
+            "median_handshake_time_ms": 105.4269133143984,
+            "std_handshake_time_ms": 2.4903283091607533,
+            "min_handshake_time_ms": 102.37572057024322,
+            "max_handshake_time_ms": 115.3988164203256,
+            "p95_handshake_time_ms": 109.96099308569478,
+            "p99_handshake_time_ms": 113.70231424260457,
+            "mean_message_size": 724.0,
+            "median_message_size": 724.0,
+            "iterations": 50,
+            "successful_iterations": 50,
+            "algorithm": "ECDH-P384 + ECDSA-P384",
+            "algorithm_details": {
+              "name": "ECDH-P384 + ECDSA-P384",
+              "key_exchange": "ECDH-P384",
+              "authentication": "ECDSA-P384",
+              "key_size": 384,
+              "security_level": 192,
+              "key_gen_time_ms": 0.8,
+              "verify_time_ms": 1.5,
+              "public_key_size": 96,
+              "signature_size": 96
+            },
+            "crypto_type": "classical"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 100,
+          "latency_ms": 50,
+          "packet_loss_percent": 0.1,
+          "jitter_ms": 5
+        }
+      },
+      "hybrid": {
+        "crypto_type": "hybrid",
+        "scenario": "WAN_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 107.33374011570031,
+            "median_handshake_time_ms": 106.63780215976482,
+            "std_handshake_time_ms": 2.698158526998656,
+            "min_handshake_time_ms": 103.4495067102269,
+            "max_handshake_time_ms": 115.29435548304446,
+            "p95_handshake_time_ms": 113.43317932828309,
+            "p99_handshake_time_ms": 114.57735475481739,
+            "mean_message_size": 1940.0,
+            "median_message_size": 1940.0,
+            "iterations": 50,
+            "successful_iterations": 50,
+            "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+            "algorithm_details": {
+              "name": "ECDH-P256 + Kyber768 + RSA-2048",
+              "classical_ke": "ECDH-P256",
+              "pq_ke": "Kyber768",
+              "authentication": "RSA-2048",
+              "key_size": 256,
+              "pq_security_level": 192,
+              "key_gen_time_ms": 2.1,
+              "verify_time_ms": 1.0,
+              "public_key_size": 1088,
+              "signature_size": 256
+            },
+            "crypto_type": "hybrid"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 109.65137095766907,
+            "median_handshake_time_ms": 109.44224086044483,
+            "std_handshake_time_ms": 2.686524903868158,
+            "min_handshake_time_ms": 105.50308032700514,
+            "max_handshake_time_ms": 115.65068371517916,
+            "p95_handshake_time_ms": 114.78608929760838,
+            "p99_handshake_time_ms": 115.48792654679252,
+            "mean_message_size": 4680.0,
+            "median_message_size": 4680.0,
+            "iterations": 50,
+            "successful_iterations": 50,
+            "algorithm": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+            "algorithm_details": {
+              "name": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+              "classical_ke": "ECDH-P256",
+              "pq_ke": "Kyber1024",
+              "classical_auth": "ECDSA-P256",
+              "pq_auth": "Dilithium2",
+              "key_size": 256,
+              "pq_security_level": 256,
+              "key_gen_time_ms": 3.2,
+              "verify_time_ms": 2.3,
+              "public_key_size": 1568,
+              "signature_size": 2420
+            },
+            "crypto_type": "hybrid"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 100,
+          "latency_ms": 50,
+          "packet_loss_percent": 0.1,
+          "jitter_ms": 5
+        }
+      },
+      "post_quantum": {
+        "crypto_type": "post_quantum",
+        "scenario": "WAN_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 106.87491370640367,
+            "median_handshake_time_ms": 106.23515919681168,
+            "std_handshake_time_ms": 3.164933935027338,
+            "min_handshake_time_ms": 102.75068906457932,
+            "max_handshake_time_ms": 116.05123016024423,
+            "p95_handshake_time_ms": 112.49843268992194,
+            "p99_handshake_time_ms": 115.63511764183379,
+            "mean_message_size": 4136.0,
+            "median_message_size": 4136.0,
+            "iterations": 50,
+            "successful_iterations": 50,
+            "algorithm": "Kyber768 + Dilithium2",
+            "algorithm_details": {
+              "name": "Kyber768 + Dilithium2",
+              "key_exchange": "Kyber768",
+              "authentication": "Dilithium2",
+              "key_size": 768,
+              "security_level": 192,
+              "key_gen_time_ms": 1.8,
+              "verify_time_ms": 0.3,
+              "public_key_size": 1184,
+              "signature_size": 2420
+            },
+            "crypto_type": "post_quantum"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 107.15756980197578,
+            "median_handshake_time_ms": 106.5707070947785,
+            "std_handshake_time_ms": 2.5766507593129058,
+            "min_handshake_time_ms": 103.83440585405988,
+            "max_handshake_time_ms": 114.42252015013835,
+            "p95_handshake_time_ms": 112.68475843470355,
+            "p99_handshake_time_ms": 113.80395110737383,
+            "mean_message_size": 5393.0,
+            "median_message_size": 5393.0,
+            "iterations": 50,
+            "successful_iterations": 50,
+            "algorithm": "Kyber1024 + Dilithium3",
+            "algorithm_details": {
+              "name": "Kyber1024 + Dilithium3",
+              "key_exchange": "Kyber1024",
+              "authentication": "Dilithium3",
+              "key_size": 1024,
+              "security_level": 256,
+              "key_gen_time_ms": 2.5,
+              "verify_time_ms": 0.6,
+              "public_key_size": 1568,
+              "signature_size": 3293
+            },
+            "crypto_type": "post_quantum"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 108.23678966621975,
+            "median_handshake_time_ms": 108.1848997758465,
+            "std_handshake_time_ms": 2.8277790928969857,
+            "min_handshake_time_ms": 104.63761101802335,
+            "max_handshake_time_ms": 118.9506880129738,
+            "p95_handshake_time_ms": 112.57269937636309,
+            "p99_handshake_time_ms": 116.1499886650661,
+            "mean_message_size": 3380.0,
+            "median_message_size": 3380.0,
+            "iterations": 50,
+            "successful_iterations": 50,
+            "algorithm": "Kyber1024 + Falcon-1024",
+            "algorithm_details": {
+              "name": "Kyber1024 + Falcon-1024",
+              "key_exchange": "Kyber1024",
+              "authentication": "Falcon-1024",
+              "key_size": 1024,
+              "security_level": 256,
+              "key_gen_time_ms": 3.1,
+              "verify_time_ms": 1.2,
+              "public_key_size": 1568,
+              "signature_size": 1280
+            },
+            "crypto_type": "post_quantum"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 100,
+          "latency_ms": 50,
+          "packet_loss_percent": 0.1,
+          "jitter_ms": 5
+        }
+      }
+    },
+    "Satellite_Environment": {
+      "classical": {
+        "crypto_type": "classical",
+        "scenario": "Satellite_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 1256.1613202490323,
+            "median_handshake_time_ms": 1253.7602323397082,
+            "std_handshake_time_ms": 31.498569981835708,
+            "min_handshake_time_ms": 1210.1856396354824,
+            "max_handshake_time_ms": 1347.842988581651,
+            "p95_handshake_time_ms": 1299.157985013401,
+            "p99_handshake_time_ms": 1338.105987868001,
+            "mean_message_size": 852.0,
+            "median_message_size": 852.0,
+            "iterations": 20,
+            "successful_iterations": 20,
+            "algorithm": "ECDH-P256 + RSA-2048",
+            "algorithm_details": {
+              "name": "ECDH-P256 + RSA-2048",
+              "key_exchange": "ECDH-P256",
+              "authentication": "RSA-2048",
+              "key_size": 256,
+              "security_level": 128,
+              "key_gen_time_ms": 0.5,
+              "verify_time_ms": 1.0,
+              "public_key_size": 64,
+              "signature_size": 256
+            },
+            "crypto_type": "classical"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 1247.7226298095452,
+            "median_handshake_time_ms": 1241.5709348783246,
+            "std_handshake_time_ms": 26.167801231303894,
+            "min_handshake_time_ms": 1214.7005467940346,
+            "max_handshake_time_ms": 1298.429909155024,
+            "p95_handshake_time_ms": 1293.090648642688,
+            "p99_handshake_time_ms": 1297.3620570525568,
+            "mean_message_size": 724.0,
+            "median_message_size": 724.0,
+            "iterations": 20,
+            "successful_iterations": 20,
+            "algorithm": "ECDH-P384 + ECDSA-P384",
+            "algorithm_details": {
+              "name": "ECDH-P384 + ECDSA-P384",
+              "key_exchange": "ECDH-P384",
+              "authentication": "ECDSA-P384",
+              "key_size": 384,
+              "security_level": 192,
+              "key_gen_time_ms": 0.8,
+              "verify_time_ms": 1.5,
+              "public_key_size": 96,
+              "signature_size": 96
+            },
+            "crypto_type": "classical"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 10,
+          "latency_ms": 600,
+          "packet_loss_percent": 1.0,
+          "jitter_ms": 50
+        }
+      },
+      "hybrid": {
+        "crypto_type": "hybrid",
+        "scenario": "Satellite_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 1242.8998952454554,
+            "median_handshake_time_ms": 1237.74802781257,
+            "std_handshake_time_ms": 28.8439501492226,
+            "min_handshake_time_ms": 1206.4743699952712,
+            "max_handshake_time_ms": 1294.2044094853597,
+            "p95_handshake_time_ms": 1289.416775940652,
+            "p99_handshake_time_ms": 1293.2468827764183,
+            "mean_message_size": 1940.0,
+            "median_message_size": 1940.0,
+            "iterations": 20,
+            "successful_iterations": 20,
+            "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+            "algorithm_details": {
+              "name": "ECDH-P256 + Kyber768 + RSA-2048",
+              "classical_ke": "ECDH-P256",
+              "pq_ke": "Kyber768",
+              "authentication": "RSA-2048",
+              "key_size": 256,
+              "pq_security_level": 192,
+              "key_gen_time_ms": 2.1,
+              "verify_time_ms": 1.0,
+              "public_key_size": 1088,
+              "signature_size": 256
+            },
+            "crypto_type": "hybrid"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 1261.256807586055,
+            "median_handshake_time_ms": 1259.2581689149504,
+            "std_handshake_time_ms": 31.782845015589952,
+            "min_handshake_time_ms": 1214.7316772084666,
+            "max_handshake_time_ms": 1319.4246038438691,
+            "p95_handshake_time_ms": 1308.4651679403282,
+            "p99_handshake_time_ms": 1317.232716663161,
+            "mean_message_size": 4680.0,
+            "median_message_size": 4680.0,
+            "iterations": 20,
+            "successful_iterations": 20,
+            "algorithm": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+            "algorithm_details": {
+              "name": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+              "classical_ke": "ECDH-P256",
+              "pq_ke": "Kyber1024",
+              "classical_auth": "ECDSA-P256",
+              "pq_auth": "Dilithium2",
+              "key_size": 256,
+              "pq_security_level": 256,
+              "key_gen_time_ms": 3.2,
+              "verify_time_ms": 2.3,
+              "public_key_size": 1568,
+              "signature_size": 2420
+            },
+            "crypto_type": "hybrid"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 10,
+          "latency_ms": 600,
+          "packet_loss_percent": 1.0,
+          "jitter_ms": 50
+        }
+      },
+      "post_quantum": {
+        "crypto_type": "post_quantum",
+        "scenario": "Satellite_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 1248.5265043649006,
+            "median_handshake_time_ms": 1237.6535299290883,
+            "std_handshake_time_ms": 32.61005305406915,
+            "min_handshake_time_ms": 1209.69714109287,
+            "max_handshake_time_ms": 1320.2739070626633,
+            "p95_handshake_time_ms": 1320.257406471589,
+            "p99_handshake_time_ms": 1320.2706069444484,
+            "mean_message_size": 4136.0,
+            "median_message_size": 4136.0,
+            "iterations": 20,
+            "successful_iterations": 20,
+            "algorithm": "Kyber768 + Dilithium2",
+            "algorithm_details": {
+              "name": "Kyber768 + Dilithium2",
+              "key_exchange": "Kyber768",
+              "authentication": "Dilithium2",
+              "key_size": 768,
+              "security_level": 192,
+              "key_gen_time_ms": 1.8,
+              "verify_time_ms": 0.3,
+              "public_key_size": 1184,
+              "signature_size": 2420
+            },
+            "crypto_type": "post_quantum"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 1240.2520035116395,
+            "median_handshake_time_ms": 1230.5917328558849,
+            "std_handshake_time_ms": 30.13674326396417,
+            "min_handshake_time_ms": 1210.2569932834733,
+            "max_handshake_time_ms": 1311.0751077882442,
+            "p95_handshake_time_ms": 1303.843404045207,
+            "p99_handshake_time_ms": 1309.6287670396366,
+            "mean_message_size": 5393.0,
+            "median_message_size": 5393.0,
+            "iterations": 20,
+            "successful_iterations": 20,
+            "algorithm": "Kyber1024 + Dilithium3",
+            "algorithm_details": {
+              "name": "Kyber1024 + Dilithium3",
+              "key_exchange": "Kyber1024",
+              "authentication": "Dilithium3",
+              "key_size": 1024,
+              "security_level": 256,
+              "key_gen_time_ms": 2.5,
+              "verify_time_ms": 0.6,
+              "public_key_size": 1568,
+              "signature_size": 3293
+            },
+            "crypto_type": "post_quantum"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 1260.334713726418,
+            "median_handshake_time_ms": 1259.842947537843,
+            "std_handshake_time_ms": 33.453043934782016,
+            "min_handshake_time_ms": 1215.117196628042,
+            "max_handshake_time_ms": 1332.5184929375325,
+            "p95_handshake_time_ms": 1312.6852961187594,
+            "p99_handshake_time_ms": 1328.5518535737779,
+            "mean_message_size": 3380.0,
+            "median_message_size": 3380.0,
+            "iterations": 20,
+            "successful_iterations": 20,
+            "algorithm": "Kyber1024 + Falcon-1024",
+            "algorithm_details": {
+              "name": "Kyber1024 + Falcon-1024",
+              "key_exchange": "Kyber1024",
+              "authentication": "Falcon-1024",
+              "key_size": 1024,
+              "security_level": 256,
+              "key_gen_time_ms": 3.1,
+              "verify_time_ms": 1.2,
+              "public_key_size": 1568,
+              "signature_size": 1280
+            },
+            "crypto_type": "post_quantum"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 10,
+          "latency_ms": 600,
+          "packet_loss_percent": 1.0,
+          "jitter_ms": 50
+        }
+      }
+    },
+    "Mobile_Environment": {
+      "classical": {
+        "crypto_type": "classical",
+        "scenario": "Mobile_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 215.79545467048163,
+            "median_handshake_time_ms": 215.0088099806253,
+            "std_handshake_time_ms": 11.583724732892952,
+            "min_handshake_time_ms": 202.02904537409196,
+            "max_handshake_time_ms": 245.98257796033045,
+            "p95_handshake_time_ms": 237.77176809146158,
+            "p99_handshake_time_ms": 245.02068307523774,
+            "mean_message_size": 852.0,
+            "median_message_size": 852.0,
+            "iterations": 30,
+            "successful_iterations": 30,
+            "algorithm": "ECDH-P256 + RSA-2048",
+            "algorithm_details": {
+              "name": "ECDH-P256 + RSA-2048",
+              "key_exchange": "ECDH-P256",
+              "authentication": "RSA-2048",
+              "key_size": 256,
+              "security_level": 128,
+              "key_gen_time_ms": 0.5,
+              "verify_time_ms": 1.0,
+              "public_key_size": 64,
+              "signature_size": 256
+            },
+            "crypto_type": "classical"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 222.60992425059894,
+            "median_handshake_time_ms": 220.80909225142898,
+            "std_handshake_time_ms": 15.70302937227896,
+            "min_handshake_time_ms": 203.98940199320788,
+            "max_handshake_time_ms": 267.5270668689596,
+            "p95_handshake_time_ms": 249.40850546841244,
+            "p99_handshake_time_ms": 263.07559974312056,
+            "mean_message_size": 724.0,
+            "median_message_size": 724.0,
+            "iterations": 30,
+            "successful_iterations": 30,
+            "algorithm": "ECDH-P384 + ECDSA-P384",
+            "algorithm_details": {
+              "name": "ECDH-P384 + ECDSA-P384",
+              "key_exchange": "ECDH-P384",
+              "authentication": "ECDSA-P384",
+              "key_size": 384,
+              "security_level": 192,
+              "key_gen_time_ms": 0.8,
+              "verify_time_ms": 1.5,
+              "public_key_size": 96,
+              "signature_size": 96
+            },
+            "crypto_type": "classical"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 25,
+          "latency_ms": 100,
+          "packet_loss_percent": 2.0,
+          "jitter_ms": 20
+        }
+      },
+      "hybrid": {
+        "crypto_type": "hybrid",
+        "scenario": "Mobile_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 217.93152156244798,
+            "median_handshake_time_ms": 214.25847744810426,
+            "std_handshake_time_ms": 11.55463113598984,
+            "min_handshake_time_ms": 204.11171687986726,
+            "max_handshake_time_ms": 243.10188541256645,
+            "p95_handshake_time_ms": 239.95003891444125,
+            "p99_handshake_time_ms": 242.26477914846143,
+            "mean_message_size": 1940.0,
+            "median_message_size": 1940.0,
+            "iterations": 30,
+            "successful_iterations": 30,
+            "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+            "algorithm_details": {
+              "name": "ECDH-P256 + Kyber768 + RSA-2048",
+              "classical_ke": "ECDH-P256",
+              "pq_ke": "Kyber768",
+              "authentication": "RSA-2048",
+              "key_size": 256,
+              "pq_security_level": 192,
+              "key_gen_time_ms": 2.1,
+              "verify_time_ms": 1.0,
+              "public_key_size": 1088,
+              "signature_size": 256
+            },
+            "crypto_type": "hybrid"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 222.8039339486636,
+            "median_handshake_time_ms": 218.8133325911538,
+            "std_handshake_time_ms": 11.375166760412148,
+            "min_handshake_time_ms": 207.64298028402226,
+            "max_handshake_time_ms": 245.4067283718747,
+            "p95_handshake_time_ms": 242.8140486034825,
+            "p99_handshake_time_ms": 245.21379049479634,
+            "mean_message_size": 4680.0,
+            "median_message_size": 4680.0,
+            "iterations": 30,
+            "successful_iterations": 30,
+            "algorithm": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+            "algorithm_details": {
+              "name": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+              "classical_ke": "ECDH-P256",
+              "pq_ke": "Kyber1024",
+              "classical_auth": "ECDSA-P256",
+              "pq_auth": "Dilithium2",
+              "key_size": 256,
+              "pq_security_level": 256,
+              "key_gen_time_ms": 3.2,
+              "verify_time_ms": 2.3,
+              "public_key_size": 1568,
+              "signature_size": 2420
+            },
+            "crypto_type": "hybrid"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 25,
+          "latency_ms": 100,
+          "packet_loss_percent": 2.0,
+          "jitter_ms": 20
+        }
+      },
+      "post_quantum": {
+        "crypto_type": "post_quantum",
+        "scenario": "Mobile_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 217.38415694328944,
+            "median_handshake_time_ms": 213.48744562360255,
+            "std_handshake_time_ms": 11.592459500252597,
+            "min_handshake_time_ms": 203.98795853990518,
+            "max_handshake_time_ms": 243.8855877693148,
+            "p95_handshake_time_ms": 239.73705401152122,
+            "p99_handshake_time_ms": 243.55847430741667,
+            "mean_message_size": 4136.0,
+            "median_message_size": 4136.0,
+            "iterations": 30,
+            "successful_iterations": 30,
+            "algorithm": "Kyber768 + Dilithium2",
+            "algorithm_details": {
+              "name": "Kyber768 + Dilithium2",
+              "key_exchange": "Kyber768",
+              "authentication": "Dilithium2",
+              "key_size": 768,
+              "security_level": 192,
+              "key_gen_time_ms": 1.8,
+              "verify_time_ms": 0.3,
+              "public_key_size": 1184,
+              "signature_size": 2420
+            },
+            "crypto_type": "post_quantum"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 219.4638206700938,
+            "median_handshake_time_ms": 215.18912238189654,
+            "std_handshake_time_ms": 10.486283336271203,
+            "min_handshake_time_ms": 207.6416686301552,
+            "max_handshake_time_ms": 242.58121575589578,
+            "p95_handshake_time_ms": 237.88211475457433,
+            "p99_handshake_time_ms": 241.4732581474653,
+            "mean_message_size": 5393.0,
+            "median_message_size": 5393.0,
+            "iterations": 30,
+            "successful_iterations": 30,
+            "algorithm": "Kyber1024 + Dilithium3",
+            "algorithm_details": {
+              "name": "Kyber1024 + Dilithium3",
+              "key_exchange": "Kyber1024",
+              "authentication": "Dilithium3",
+              "key_size": 1024,
+              "security_level": 256,
+              "key_gen_time_ms": 2.5,
+              "verify_time_ms": 0.6,
+              "public_key_size": 1568,
+              "signature_size": 3293
+            },
+            "crypto_type": "post_quantum"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 221.73164005263556,
+            "median_handshake_time_ms": 215.77695954061738,
+            "std_handshake_time_ms": 13.910650081507695,
+            "min_handshake_time_ms": 205.74173218435251,
+            "max_handshake_time_ms": 258.13907241196273,
+            "p95_handshake_time_ms": 249.13757442076277,
+            "p99_handshake_time_ms": 257.09547176183605,
+            "mean_message_size": 3380.0,
+            "median_message_size": 3380.0,
+            "iterations": 30,
+            "successful_iterations": 30,
+            "algorithm": "Kyber1024 + Falcon-1024",
+            "algorithm_details": {
+              "name": "Kyber1024 + Falcon-1024",
+              "key_exchange": "Kyber1024",
+              "authentication": "Falcon-1024",
+              "key_size": 1024,
+              "security_level": 256,
+              "key_gen_time_ms": 3.1,
+              "verify_time_ms": 1.2,
+              "public_key_size": 1568,
+              "signature_size": 1280
+            },
+            "crypto_type": "post_quantum"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 25,
+          "latency_ms": 100,
+          "packet_loss_percent": 2.0,
+          "jitter_ms": 20
+        }
+      }
+    },
+    "Constrained_Environment": {
+      "classical": {
+        "crypto_type": "classical",
+        "scenario": "Constrained_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 498.2639637132717,
+            "median_handshake_time_ms": 482.6084248950185,
+            "std_handshake_time_ms": 71.82368958415711,
+            "min_handshake_time_ms": 409.338277644775,
+            "max_handshake_time_ms": 647.3605085286791,
+            "p95_handshake_time_ms": 624.172840728872,
+            "p99_handshake_time_ms": 642.7229749687177,
+            "mean_message_size": 852.0,
+            "median_message_size": 852.0,
+            "iterations": 10,
+            "successful_iterations": 10,
+            "algorithm": "ECDH-P256 + RSA-2048",
+            "algorithm_details": {
+              "name": "ECDH-P256 + RSA-2048",
+              "key_exchange": "ECDH-P256",
+              "authentication": "RSA-2048",
+              "key_size": 256,
+              "security_level": 128,
+              "key_gen_time_ms": 0.5,
+              "verify_time_ms": 1.0,
+              "public_key_size": 64,
+              "signature_size": 256
+            },
+            "crypto_type": "classical"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 510.72607967463637,
+            "median_handshake_time_ms": 506.48289714927097,
+            "std_handshake_time_ms": 53.1318278944241,
+            "min_handshake_time_ms": 410.87366207454494,
+            "max_handshake_time_ms": 627.7631411876057,
+            "p95_handshake_time_ms": 594.407355493987,
+            "p99_handshake_time_ms": 621.091984048882,
+            "mean_message_size": 724.0,
+            "median_message_size": 724.0,
+            "iterations": 10,
+            "successful_iterations": 10,
+            "algorithm": "ECDH-P384 + ECDSA-P384",
+            "algorithm_details": {
+              "name": "ECDH-P384 + ECDSA-P384",
+              "key_exchange": "ECDH-P384",
+              "authentication": "ECDSA-P384",
+              "key_size": 384,
+              "security_level": 192,
+              "key_gen_time_ms": 0.8,
+              "verify_time_ms": 1.5,
+              "public_key_size": 96,
+              "signature_size": 96
+            },
+            "crypto_type": "classical"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 1,
+          "latency_ms": 200,
+          "packet_loss_percent": 5.0,
+          "jitter_ms": 100
+        }
+      },
+      "hybrid": {
+        "crypto_type": "hybrid",
+        "scenario": "Constrained_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 519.2043051824345,
+            "median_handshake_time_ms": 505.39168680848275,
+            "std_handshake_time_ms": 56.827809135185355,
+            "min_handshake_time_ms": 464.63747895662647,
+            "max_handshake_time_ms": 628.39722171248,
+            "p95_handshake_time_ms": 624.9404662451353,
+            "p99_handshake_time_ms": 627.7058706190111,
+            "mean_message_size": 1940.0,
+            "median_message_size": 1940.0,
+            "iterations": 10,
+            "successful_iterations": 10,
+            "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+            "algorithm_details": {
+              "name": "ECDH-P256 + Kyber768 + RSA-2048",
+              "classical_ke": "ECDH-P256",
+              "pq_ke": "Kyber768",
+              "authentication": "RSA-2048",
+              "key_size": 256,
+              "pq_security_level": 192,
+              "key_gen_time_ms": 2.1,
+              "verify_time_ms": 1.0,
+              "public_key_size": 1088,
+              "signature_size": 256
+            },
+            "crypto_type": "hybrid"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 536.4851191032723,
+            "median_handshake_time_ms": 549.101682967084,
+            "std_handshake_time_ms": 50.060635981521436,
+            "min_handshake_time_ms": 447.77998130534,
+            "max_handshake_time_ms": 596.6330136795452,
+            "p95_handshake_time_ms": 594.5627894503168,
+            "p99_handshake_time_ms": 596.2189688336996,
+            "mean_message_size": 4680.0,
+            "median_message_size": 4680.0,
+            "iterations": 10,
+            "successful_iterations": 10,
+            "algorithm": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+            "algorithm_details": {
+              "name": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+              "classical_ke": "ECDH-P256",
+              "pq_ke": "Kyber1024",
+              "classical_auth": "ECDSA-P256",
+              "pq_auth": "Dilithium2",
+              "key_size": 256,
+              "pq_security_level": 256,
+              "key_gen_time_ms": 3.2,
+              "verify_time_ms": 2.3,
+              "public_key_size": 1568,
+              "signature_size": 2420
+            },
+            "crypto_type": "hybrid"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 1,
+          "latency_ms": 200,
+          "packet_loss_percent": 5.0,
+          "jitter_ms": 100
+        }
+      },
+      "post_quantum": {
+        "crypto_type": "post_quantum",
+        "scenario": "Constrained_Environment",
+        "results": [
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 522.0205341717273,
+            "median_handshake_time_ms": 533.6971256885261,
+            "std_handshake_time_ms": 44.877967351795995,
+            "min_handshake_time_ms": 440.1450573046586,
+            "max_handshake_time_ms": 605.4034867433512,
+            "p95_handshake_time_ms": 583.8771442187749,
+            "p99_handshake_time_ms": 601.098218238436,
+            "mean_message_size": 4136.0,
+            "median_message_size": 4136.0,
+            "iterations": 10,
+            "successful_iterations": 10,
+            "algorithm": "Kyber768 + Dilithium2",
+            "algorithm_details": {
+              "name": "Kyber768 + Dilithium2",
+              "key_exchange": "Kyber768",
+              "authentication": "Dilithium2",
+              "key_size": 768,
+              "security_level": 192,
+              "key_gen_time_ms": 1.8,
+              "verify_time_ms": 0.3,
+              "public_key_size": 1184,
+              "signature_size": 2420
+            },
+            "crypto_type": "post_quantum"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 527.2126075175148,
+            "median_handshake_time_ms": 512.2316324029891,
+            "std_handshake_time_ms": 69.20667980190893,
+            "min_handshake_time_ms": 450.56677635169467,
+            "max_handshake_time_ms": 684.2664108553822,
+            "p95_handshake_time_ms": 655.6995590524415,
+            "p99_handshake_time_ms": 678.5530404947941,
+            "mean_message_size": 5393.0,
+            "median_message_size": 5393.0,
+            "iterations": 10,
+            "successful_iterations": 10,
+            "algorithm": "Kyber1024 + Dilithium3",
+            "algorithm_details": {
+              "name": "Kyber1024 + Dilithium3",
+              "key_exchange": "Kyber1024",
+              "authentication": "Dilithium3",
+              "key_size": 1024,
+              "security_level": 256,
+              "key_gen_time_ms": 2.5,
+              "verify_time_ms": 0.6,
+              "public_key_size": 1568,
+              "signature_size": 3293
+            },
+            "crypto_type": "post_quantum"
+          },
+          {
+            "success_rate": 100.0,
+            "mean_handshake_time_ms": 488.6494347069559,
+            "median_handshake_time_ms": 489.998521970058,
+            "std_handshake_time_ms": 29.35246883450901,
+            "min_handshake_time_ms": 443.5882971465605,
+            "max_handshake_time_ms": 527.712889768651,
+            "p95_handshake_time_ms": 524.0310760468471,
+            "p99_handshake_time_ms": 526.9765270242902,
+            "mean_message_size": 3380.0,
+            "median_message_size": 3380.0,
+            "iterations": 10,
+            "successful_iterations": 10,
+            "algorithm": "Kyber1024 + Falcon-1024",
+            "algorithm_details": {
+              "name": "Kyber1024 + Falcon-1024",
+              "key_exchange": "Kyber1024",
+              "authentication": "Falcon-1024",
+              "key_size": 1024,
+              "security_level": 256,
+              "key_gen_time_ms": 3.1,
+              "verify_time_ms": 1.2,
+              "public_key_size": 1568,
+              "signature_size": 1280
+            },
+            "crypto_type": "post_quantum"
+          }
+        ],
+        "network_conditions": {
+          "bandwidth_mbps": 1,
+          "latency_ms": 200,
+          "packet_loss_percent": 5.0,
+          "jitter_ms": 100
+        }
+      }
+    }
+  },
+  "detailed_analysis": {
+    "scenario_comparisons": {
+      "LAN_Environment": {
+        "crypto_performance": {
+          "classical": {
+            "mean_handshake_time_ms": 2.9625100584192507,
+            "min_handshake_time_ms": 2.5716691323261376,
+            "max_handshake_time_ms": 3.353350984512364,
+            "std_handshake_time_ms": 0.39084092609311316,
+            "mean_message_size": 788.0,
+            "min_message_size": 724.0,
+            "max_message_size": 852.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 2
+          },
+          "hybrid": {
+            "mean_handshake_time_ms": 5.4534600294716675,
+            "min_handshake_time_ms": 4.2320532720579545,
+            "max_handshake_time_ms": 6.674866786885381,
+            "std_handshake_time_ms": 1.221406757413713,
+            "mean_message_size": 3310.0,
+            "min_message_size": 1940.0,
+            "max_message_size": 4680.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 2
+          },
+          "post_quantum": {
+            "mean_handshake_time_ms": 4.300626608688681,
+            "min_handshake_time_ms": 3.2651484814406437,
+            "max_handshake_time_ms": 5.384740522883333,
+            "std_handshake_time_ms": 0.8660029581803725,
+            "mean_message_size": 4303.0,
+            "min_message_size": 3380.0,
+            "max_message_size": 5393.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 3
+          }
+        },
+        "fastest_algorithm": {
+          "name": "ECDH-P256 + RSA-2048",
+          "crypto_type": "classical",
+          "time_ms": 2.5716691323261376
+        },
+        "smallest_messages": {
+          "name": "ECDH-P384 + ECDSA-P384",
+          "crypto_type": "classical",
+          "size_bytes": 724.0
+        },
+        "reliability_ranking": [
+          {
+            "name": "ECDH-P256 + RSA-2048",
+            "crypto_type": "classical",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P384 + ECDSA-P384",
+            "crypto_type": "classical",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P256 + Kyber768 + RSA-2048",
+            "crypto_type": "hybrid",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+            "crypto_type": "hybrid",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber768 + Dilithium2",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber1024 + Dilithium3",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber1024 + Falcon-1024",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          }
+        ]
+      },
+      "WAN_Environment": {
+        "crypto_performance": {
+          "classical": {
+            "mean_handshake_time_ms": 105.66873505964234,
+            "min_handshake_time_ms": 105.43501959290374,
+            "max_handshake_time_ms": 105.90245052638095,
+            "std_handshake_time_ms": 0.23371546673860166,
+            "mean_message_size": 788.0,
+            "min_message_size": 724.0,
+            "max_message_size": 852.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 2
+          },
+          "hybrid": {
+            "mean_handshake_time_ms": 108.49255553668469,
+            "min_handshake_time_ms": 107.33374011570031,
+            "max_handshake_time_ms": 109.65137095766907,
+            "std_handshake_time_ms": 1.1588154209843822,
+            "mean_message_size": 3310.0,
+            "min_message_size": 1940.0,
+            "max_message_size": 4680.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 2
+          },
+          "post_quantum": {
+            "mean_handshake_time_ms": 107.42309105819974,
+            "min_handshake_time_ms": 106.87491370640367,
+            "max_handshake_time_ms": 108.23678966621975,
+            "std_handshake_time_ms": 0.5868291549285866,
+            "mean_message_size": 4303.0,
+            "min_message_size": 3380.0,
+            "max_message_size": 5393.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 3
+          }
+        },
+        "fastest_algorithm": {
+          "name": "ECDH-P256 + RSA-2048",
+          "crypto_type": "classical",
+          "time_ms": 105.43501959290374
+        },
+        "smallest_messages": {
+          "name": "ECDH-P384 + ECDSA-P384",
+          "crypto_type": "classical",
+          "size_bytes": 724.0
+        },
+        "reliability_ranking": [
+          {
+            "name": "ECDH-P256 + RSA-2048",
+            "crypto_type": "classical",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P384 + ECDSA-P384",
+            "crypto_type": "classical",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P256 + Kyber768 + RSA-2048",
+            "crypto_type": "hybrid",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+            "crypto_type": "hybrid",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber768 + Dilithium2",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber1024 + Dilithium3",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber1024 + Falcon-1024",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          }
+        ]
+      },
+      "Satellite_Environment": {
+        "crypto_performance": {
+          "classical": {
+            "mean_handshake_time_ms": 1251.9419750292886,
+            "min_handshake_time_ms": 1247.7226298095452,
+            "max_handshake_time_ms": 1256.1613202490323,
+            "std_handshake_time_ms": 4.219345219743559,
+            "mean_message_size": 788.0,
+            "min_message_size": 724.0,
+            "max_message_size": 852.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 2
+          },
+          "hybrid": {
+            "mean_handshake_time_ms": 1252.0783514157552,
+            "min_handshake_time_ms": 1242.8998952454554,
+            "max_handshake_time_ms": 1261.256807586055,
+            "std_handshake_time_ms": 9.178456170299796,
+            "mean_message_size": 3310.0,
+            "min_message_size": 1940.0,
+            "max_message_size": 4680.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 2
+          },
+          "post_quantum": {
+            "mean_handshake_time_ms": 1249.704407200986,
+            "min_handshake_time_ms": 1240.2520035116395,
+            "max_handshake_time_ms": 1260.334713726418,
+            "std_handshake_time_ms": 8.240930518298493,
+            "mean_message_size": 4303.0,
+            "min_message_size": 3380.0,
+            "max_message_size": 5393.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 3
+          }
+        },
+        "fastest_algorithm": {
+          "name": "Kyber1024 + Dilithium3",
+          "crypto_type": "post_quantum",
+          "time_ms": 1240.2520035116395
+        },
+        "smallest_messages": {
+          "name": "ECDH-P384 + ECDSA-P384",
+          "crypto_type": "classical",
+          "size_bytes": 724.0
+        },
+        "reliability_ranking": [
+          {
+            "name": "ECDH-P256 + RSA-2048",
+            "crypto_type": "classical",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P384 + ECDSA-P384",
+            "crypto_type": "classical",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P256 + Kyber768 + RSA-2048",
+            "crypto_type": "hybrid",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+            "crypto_type": "hybrid",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber768 + Dilithium2",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber1024 + Dilithium3",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber1024 + Falcon-1024",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          }
+        ]
+      },
+      "Mobile_Environment": {
+        "crypto_performance": {
+          "classical": {
+            "mean_handshake_time_ms": 219.20268946054028,
+            "min_handshake_time_ms": 215.79545467048163,
+            "max_handshake_time_ms": 222.60992425059894,
+            "std_handshake_time_ms": 3.407234790058652,
+            "mean_message_size": 788.0,
+            "min_message_size": 724.0,
+            "max_message_size": 852.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 2
+          },
+          "hybrid": {
+            "mean_handshake_time_ms": 220.3677277555558,
+            "min_handshake_time_ms": 217.93152156244798,
+            "max_handshake_time_ms": 222.8039339486636,
+            "std_handshake_time_ms": 2.4362061931078074,
+            "mean_message_size": 3310.0,
+            "min_message_size": 1940.0,
+            "max_message_size": 4680.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 2
+          },
+          "post_quantum": {
+            "mean_handshake_time_ms": 219.52653922200625,
+            "min_handshake_time_ms": 217.38415694328944,
+            "max_handshake_time_ms": 221.73164005263556,
+            "std_handshake_time_ms": 1.7754065373087442,
+            "mean_message_size": 4303.0,
+            "min_message_size": 3380.0,
+            "max_message_size": 5393.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 3
+          }
+        },
+        "fastest_algorithm": {
+          "name": "ECDH-P256 + RSA-2048",
+          "crypto_type": "classical",
+          "time_ms": 215.79545467048163
+        },
+        "smallest_messages": {
+          "name": "ECDH-P384 + ECDSA-P384",
+          "crypto_type": "classical",
+          "size_bytes": 724.0
+        },
+        "reliability_ranking": [
+          {
+            "name": "ECDH-P256 + RSA-2048",
+            "crypto_type": "classical",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P384 + ECDSA-P384",
+            "crypto_type": "classical",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P256 + Kyber768 + RSA-2048",
+            "crypto_type": "hybrid",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+            "crypto_type": "hybrid",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber768 + Dilithium2",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber1024 + Dilithium3",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber1024 + Falcon-1024",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          }
+        ]
+      },
+      "Constrained_Environment": {
+        "crypto_performance": {
+          "classical": {
+            "mean_handshake_time_ms": 504.4950216939541,
+            "min_handshake_time_ms": 498.2639637132717,
+            "max_handshake_time_ms": 510.72607967463637,
+            "std_handshake_time_ms": 6.231057980682323,
+            "mean_message_size": 788.0,
+            "min_message_size": 724.0,
+            "max_message_size": 852.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 2
+          },
+          "hybrid": {
+            "mean_handshake_time_ms": 527.8447121428534,
+            "min_handshake_time_ms": 519.2043051824345,
+            "max_handshake_time_ms": 536.4851191032723,
+            "std_handshake_time_ms": 8.640406960418886,
+            "mean_message_size": 3310.0,
+            "min_message_size": 1940.0,
+            "max_message_size": 4680.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 2
+          },
+          "post_quantum": {
+            "mean_handshake_time_ms": 512.6275254653993,
+            "min_handshake_time_ms": 488.6494347069559,
+            "max_handshake_time_ms": 527.2126075175148,
+            "std_handshake_time_ms": 17.087052285714698,
+            "mean_message_size": 4303.0,
+            "min_message_size": 3380.0,
+            "max_message_size": 5393.0,
+            "mean_success_rate": 100.0,
+            "algorithms_count": 3
+          }
+        },
+        "fastest_algorithm": {
+          "name": "Kyber1024 + Falcon-1024",
+          "crypto_type": "post_quantum",
+          "time_ms": 488.6494347069559
+        },
+        "smallest_messages": {
+          "name": "ECDH-P384 + ECDSA-P384",
+          "crypto_type": "classical",
+          "size_bytes": 724.0
+        },
+        "reliability_ranking": [
+          {
+            "name": "ECDH-P256 + RSA-2048",
+            "crypto_type": "classical",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P384 + ECDSA-P384",
+            "crypto_type": "classical",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P256 + Kyber768 + RSA-2048",
+            "crypto_type": "hybrid",
+            "success_rate": 100.0
+          },
+          {
+            "name": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+            "crypto_type": "hybrid",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber768 + Dilithium2",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber1024 + Dilithium3",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          },
+          {
+            "name": "Kyber1024 + Falcon-1024",
+            "crypto_type": "post_quantum",
+            "success_rate": 100.0
+          }
+        ]
+      }
+    },
+    "crypto_type_comparisons": {
+      "speed_comparison": {
+        "classical": {
+          "mean_time_ms": 416.8541862603689,
+          "std_time_ms": 449.96217517210005
+        },
+        "hybrid": {
+          "mean_time_ms": 422.84736137606416,
+          "std_time_ms": 450.0779407736759
+        },
+        "post_quantum": {
+          "mean_time_ms": 418.716437911056,
+          "std_time_ms": 449.0089202570084
+        }
+      },
+      "size_comparison": {
+        "classical": {
+          "mean_size_bytes": 788.0,
+          "std_size_bytes": 64.0
+        },
+        "hybrid": {
+          "mean_size_bytes": 3310.0,
+          "std_size_bytes": 1370.0
+        },
+        "post_quantum": {
+          "mean_size_bytes": 4303.0,
+          "std_size_bytes": 830.2445422885959
+        }
+      },
+      "reliability_comparison": {
+        "classical": {
+          "mean_success_rate": 100.0,
+          "std_success_rate": 0.0
+        },
+        "hybrid": {
+          "mean_success_rate": 100.0,
+          "std_success_rate": 0.0
+        },
+        "post_quantum": {
+          "mean_success_rate": 100.0,
+          "std_success_rate": 0.0
+        }
+      },
+      "relative_performance": {
+        "classical": {
+          "time_overhead_factor": 1.0,
+          "size_overhead_factor": 1.0,
+          "time_overhead_percent": 0.0,
+          "size_overhead_percent": 0.0
+        },
+        "hybrid": {
+          "time_overhead_factor": 1.014377149884137,
+          "size_overhead_factor": 4.200507614213198,
+          "time_overhead_percent": 1.4377149884136964,
+          "size_overhead_percent": 320.05076142131975
+        },
+        "post_quantum": {
+          "time_overhead_factor": 1.0044673934245294,
+          "size_overhead_factor": 5.460659898477157,
+          "time_overhead_percent": 0.4467393424529398,
+          "size_overhead_percent": 446.06598984771574
+        }
+      }
+    },
+    "algorithm_rankings": {
+      "by_speed": [
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 2.5716691323261376,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9517896396243537
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "post_quantum",
+          "algorithm": "Kyber768 + Dilithium2",
+          "time_ms": 3.2651484814406437,
+          "size_bytes": 4136.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.7688884533488659
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 3.353350984512364,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9586620751160029
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "hybrid",
+          "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+          "time_ms": 4.2320532720579545,
+          "size_bytes": 1940.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8907401587392723
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "post_quantum",
+          "algorithm": "Kyber1024 + Dilithium3",
+          "time_ms": 4.251990821742067,
+          "size_bytes": 5393.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.6986515067205449
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "post_quantum",
+          "algorithm": "Kyber1024 + Falcon-1024",
+          "time_ms": 5.384740522883333,
+          "size_bytes": 3380.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8102707526113675
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "hybrid",
+          "algorithm": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+          "time_ms": 6.674866786885381,
+          "size_bytes": 4680.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.7375456316971492
+        },
+        {
+          "scenario": "WAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 105.43501959290374,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9191671475697973
+        },
+        {
+          "scenario": "WAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 105.90245052638095,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9261392458475879
+        },
+        {
+          "scenario": "WAN_Environment",
+          "crypto_type": "post_quantum",
+          "algorithm": "Kyber768 + Dilithium2",
+          "time_ms": 106.87491370640367,
+          "size_bytes": 4136.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.7360292403474269
+        }
+      ],
+      "by_message_size": [
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 3.353350984512364,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9586620751160029
+        },
+        {
+          "scenario": "WAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 105.90245052638095,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9261392458475879
+        },
+        {
+          "scenario": "Satellite_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 1247.7226298095452,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.5640178531492943
+        },
+        {
+          "scenario": "Mobile_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 222.60992425059894,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8891261734828608
+        },
+        {
+          "scenario": "Constrained_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 510.72607967463637,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.7977518701082867
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 2.5716691323261376,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9517896396243537
+        },
+        {
+          "scenario": "WAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 105.43501959290374,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9191671475697973
+        },
+        {
+          "scenario": "Satellite_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 1256.1613202490323,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.554221232119469
+        },
+        {
+          "scenario": "Mobile_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 215.79545467048163,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8841670002837585
+        },
+        {
+          "scenario": "Constrained_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 498.2639637132717,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.7945838139433297
+        }
+      ],
+      "by_reliability": [
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 2.5716691323261376,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9517896396243537
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 3.353350984512364,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9586620751160029
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "hybrid",
+          "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+          "time_ms": 4.2320532720579545,
+          "size_bytes": 1940.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8907401587392723
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "hybrid",
+          "algorithm": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+          "time_ms": 6.674866786885381,
+          "size_bytes": 4680.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.7375456316971492
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "post_quantum",
+          "algorithm": "Kyber768 + Dilithium2",
+          "time_ms": 3.2651484814406437,
+          "size_bytes": 4136.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.7688884533488659
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "post_quantum",
+          "algorithm": "Kyber1024 + Dilithium3",
+          "time_ms": 4.251990821742067,
+          "size_bytes": 5393.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.6986515067205449
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "post_quantum",
+          "algorithm": "Kyber1024 + Falcon-1024",
+          "time_ms": 5.384740522883333,
+          "size_bytes": 3380.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8102707526113675
+        },
+        {
+          "scenario": "WAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 105.43501959290374,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9191671475697973
+        },
+        {
+          "scenario": "WAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 105.90245052638095,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9261392458475879
+        },
+        {
+          "scenario": "WAN_Environment",
+          "crypto_type": "hybrid",
+          "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+          "time_ms": 107.33374011570031,
+          "size_bytes": 1940.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8580420797363226
+        }
+      ],
+      "balanced_score": [
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 3.353350984512364,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9586620751160029
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 2.5716691323261376,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9517896396243537
+        },
+        {
+          "scenario": "WAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 105.90245052638095,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9261392458475879
+        },
+        {
+          "scenario": "WAN_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 105.43501959290374,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.9191671475697973
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "hybrid",
+          "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+          "time_ms": 4.2320532720579545,
+          "size_bytes": 1940.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8907401587392723
+        },
+        {
+          "scenario": "Mobile_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P384 + ECDSA-P384",
+          "time_ms": 222.60992425059894,
+          "size_bytes": 724.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8891261734828608
+        },
+        {
+          "scenario": "Mobile_Environment",
+          "crypto_type": "classical",
+          "algorithm": "ECDH-P256 + RSA-2048",
+          "time_ms": 215.79545467048163,
+          "size_bytes": 852.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8841670002837585
+        },
+        {
+          "scenario": "WAN_Environment",
+          "crypto_type": "hybrid",
+          "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+          "time_ms": 107.33374011570031,
+          "size_bytes": 1940.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8580420797363226
+        },
+        {
+          "scenario": "Mobile_Environment",
+          "crypto_type": "hybrid",
+          "algorithm": "ECDH-P256 + Kyber768 + RSA-2048",
+          "time_ms": 217.93152156244798,
+          "size_bytes": 1940.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8229666594788343
+        },
+        {
+          "scenario": "LAN_Environment",
+          "crypto_type": "post_quantum",
+          "algorithm": "Kyber1024 + Falcon-1024",
+          "time_ms": 5.384740522883333,
+          "size_bytes": 3380.0,
+          "success_rate": 100.0,
+          "balanced_score": 0.8102707526113675
+        }
+      ]
+    },
+    "network_impact_analysis": {
+      "latency_sensitivity": {
+        "classical": {
+          "variance": 202452.26996838654,
+          "coefficient_of_variation": 1.079386937534774,
+          "scenarios": {
+            "LAN_Environment": 2.9625100584192507,
+            "WAN_Environment": 105.66873505964234,
+            "Satellite_Environment": 1251.9419750292886,
+            "Mobile_Environment": 219.20268946054028,
+            "Constrained_Environment": 504.4950216939541
+          }
+        },
+        "hybrid": {
+          "variance": 202536.6186753977,
+          "coefficient_of_variation": 1.064310024575557,
+          "scenarios": {
+            "LAN_Environment": 5.4534600294716675,
+            "WAN_Environment": 108.49255553668469,
+            "Satellite_Environment": 1252.0783514157552,
+            "Mobile_Environment": 220.3677277555558,
+            "Constrained_Environment": 527.8447121428534
+          }
+        },
+        "post_quantum": {
+          "variance": 201536.18513244943,
+          "coefficient_of_variation": 1.0721523604969063,
+          "scenarios": {
+            "LAN_Environment": 4.300626608688681,
+            "WAN_Environment": 107.42309105819974,
+            "Satellite_Environment": 1249.704407200986,
+            "Mobile_Environment": 219.52653922200625,
+            "Constrained_Environment": 512.6275254653993
+          }
+        }
+      },
+      "bandwidth_sensitivity": {},
+      "loss_sensitivity": {},
+      "recommendations": {
+        "high_latency_networks": [
+          "Use hybrid algorithms for high-latency networks"
+        ],
+        "low_bandwidth_networks": [],
+        "unreliable_networks": [],
+        "general_guidelines": [
+          "Classical algorithms perform best in constrained networks",
+          "Hybrid algorithms provide good balance of security and performance",
+          "Post-quantum algorithms require careful network condition assessment",
+          "Consider timeout adjustments for post-quantum in high-latency scenarios"
+        ]
+      }
+    },
+    "summary_insights": [
+      "Hybrid algorithms show 1.4% time overhead vs classical",
+      "Post-quantum algorithms show 0.4% time overhead vs classical",
+      "Hybrid algorithms increase message size by 320.1%",
+      "Network latency has greater impact on post-quantum algorithms",
+      "Classical algorithms maintain best reliability across all network conditions",
+      "Fastest algorithm: ECDH-P256 + RSA-2048 (2.6ms)",
+      "Most reliable: ECDH-P256 + RSA-2048 (100.0% success)"
+    ]
+  }
+}

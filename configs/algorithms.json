@@ -1,0 +1,88 @@
+{
+  "classical": [
+    {
+      "name": "ECDH-P256 + RSA-2048",
+      "key_exchange": "ECDH-P256",
+      "authentication": "RSA-2048",
+      "key_size": 256,
+      "security_level": 128,
+      "key_gen_time_ms": 0.5,
+      "verify_time_ms": 1.0,
+      "public_key_size": 64,
+      "signature_size": 256
+    },
+    {
+      "name": "ECDH-P384 + ECDSA-P384",
+      "key_exchange": "ECDH-P384",
+      "authentication": "ECDSA-P384",
+      "key_size": 384,
+      "security_level": 192,
+      "key_gen_time_ms": 0.8,
+      "verify_time_ms": 1.5,
+      "public_key_size": 96,
+      "signature_size": 96
+    }
+  ],
+  "hybrid": [
+    {
+      "name": "ECDH-P256 + Kyber768 + RSA-2048",
+      "classical_ke": "ECDH-P256",
+      "pq_ke": "Kyber768",
+      "authentication": "RSA-2048",
+      "key_size": 256,
+      "pq_security_level": 192,
+      "key_gen_time_ms": 2.1,
+      "verify_time_ms": 1.0,
+      "public_key_size": 1088,
+      "signature_size": 256
+    },
+    {
+      "name": "ECDH-P256 + Kyber1024 + ECDSA-P256 + Dilithium2",
+      "classical_ke": "ECDH-P256",
+      "pq_ke": "Kyber1024",
+      "classical_auth": "ECDSA-P256",
+      "pq_auth": "Dilithium2",
+      "key_size": 256,
+      "pq_security_level": 256,
+      "key_gen_time_ms": 3.2,
+      "verify_time_ms": 2.3,
+      "public_key_size": 1568,
+      "signature_size": 2420
+    }
+  ],
+  "post_quantum": [
+    {
+      "name": "Kyber768 + Dilithium2",
+      "key_exchange": "Kyber768",
+      "authentication": "Dilithium2",
+      "key_size": 768,
+      "security_level": 192,
+      "key_gen_time_ms": 1.8,
+      "verify_time_ms": 0.3,
+      "public_key_size": 1184,
+      "signature_size": 2420
+    },
+    {
+      "name": "Kyber1024 + Dilithium3",
+      "key_exchange": "Kyber1024",
+      "authentication": "Dilithium3",
+      "key_size": 1024,
+      "security_level": 256,
+      "key_gen_time_ms": 2.5,
+      "verify_time_ms": 0.6,
+      "public_key_size": 1568,
+      "signature_size": 3293
+    },
+    {
+      "name": "Kyber1024 + Falcon-1024",
+      "key_exchange": "Kyber1024",
+      "authentication": "Falcon-1024",
+      "key_size": 1024,
+      "security_level": 256,
+      "key_gen_time_ms": 3.1,
+      "verify_time_ms": 1.2,
+      "public_key_size": 1568,
+      "signature_size": 1280
+    }
+  ]
+}
